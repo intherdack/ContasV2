@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ContasDataSet" targetNamespace="http://tempuri.org/ContasDataSet.xsd" xmlns:mstns="http://tempuri.org/ContasDataSet.xsd" xmlns="http://tempuri.org/ContasDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ContasConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ContasConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Contasv2.Properties.Settings.GlobalReference.Default.ContasConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="contafixaTableAdapter" GeneratorDataComponentClassName="contafixaTableAdapter" Name="contafixa" UserDataComponentName="contafixaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ContasConnectionString (Settings)" DbObjectName="Contas.contafixa" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT codigo, descricao, datavencimento, datapagamento, numparcelas, tipo FROM contas.contafixa</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="contamovelTableAdapter" GeneratorDataComponentClassName="contamovelTableAdapter" Name="contamovel" UserDataComponentName="contamovelTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ContasConnectionString (Settings)" DbObjectName="Contas.contamovel" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT codigo, descricao, datavencimento, datapagamento, tipo FROM contas.contamovel</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ContasDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="ContasDataSet" msprop:Generator_UserDSName="ContasDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="contafixa" msprop:Generator_TableClassName="contafixaDataTable" msprop:Generator_TableVarName="tablecontafixa" msprop:Generator_TablePropName="contafixa" msprop:Generator_RowDeletingName="contafixaRowDeleting" msprop:Generator_RowChangingName="contafixaRowChanging" msprop:Generator_RowEvHandlerName="contafixaRowChangeEventHandler" msprop:Generator_RowDeletedName="contafixaRowDeleted" msprop:Generator_UserTableName="contafixa" msprop:Generator_RowChangedName="contafixaRowChanged" msprop:Generator_RowEvArgName="contafixaRowChangeEvent" msprop:Generator_RowClassName="contafixaRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="contamovel" msprop:Generator_TableClassName="contamovelDataTable" msprop:Generator_TableVarName="tablecontamovel" msprop:Generator_TablePropName="contamovel" msprop:Generator_RowDeletingName="contamovelRowDeleting" msprop:Generator_RowChangingName="contamovelRowChanging" msprop:Generator_RowEvHandlerName="contamovelRowChangeEventHandler" msprop:Generator_RowDeletedName="contamovelRowDeleted" msprop:Generator_UserTableName="contamovel" msprop:Generator_RowChangedName="contamovelRowChanged" msprop:Generator_RowEvArgName="contamovelRowChangeEvent" msprop:Generator_RowClassName="contamovelRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
